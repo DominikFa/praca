@@ -1,0 +1,71 @@
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.ticket-stub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--accent-secondary);
+  border-radius: 10px;
+  padding: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ticket-stub--inactive {
+  border-left-color: var(--text-muted);
+  opacity: 0.78;
+}
+
+.ticket-stub-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ticket-id-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.ticket-stub-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* Pure white optical QR box even in Dark Mode */
+.qr-optical-box {
+  background: #ffffff;
+  color: #141413;
+  border: 2px solid #141413;
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.qr-optical-box img {
+  width: 240px;
+  height: 240px;
+  display: block;
+}
+
+.qr-caption {
+  margin-top: 0.6rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: #3f3d38;
+}
